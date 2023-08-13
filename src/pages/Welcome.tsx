@@ -2,6 +2,7 @@ import { SafeAreaView, Text, Image, TouchableOpacity, StyleSheet, Dimensions} fr
 import { Feather } from '@expo/vector-icons';
 import wateringImg from '../assets/watering.png';
 import colors from '../styles/colors';
+import fonts from '../styles/fonts';
 
 
 export function Welcome(){
@@ -40,7 +41,9 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
         color: colors.heading,
-        marginTop: 38
+        marginTop: 38,
+        fontFamily: fonts.heading,
+        
     },
 
     subtitle:{
