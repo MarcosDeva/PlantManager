@@ -1,9 +1,9 @@
 
 import * as SplashScreen from 'expo-splash-screen';
-import { 
-  useFonts, Jost_400Regular, Jost_600SemiBold
+import { useFonts, Jost_400Regular, Jost_600SemiBold
 } from '@expo-google-fonts/jost';
 import { UserIdentification } from "./src/pages/UserIdentification";
+import { Confirmation } from './src/pages/Confirmation';
 
 
 export default function App() {
@@ -19,6 +19,7 @@ export default function App() {
   }
 
   return (
-    <UserIdentification/>
+    // <UserIdentification/>
+    <Confirmation/>
   );
 }
