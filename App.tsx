@@ -1,10 +1,12 @@
-
+import {useCallback} from 'react';
 import * as SplashScreen from 'expo-splash-screen';
-import { useFonts, Jost_400Regular, Jost_600SemiBold
+import { 
+  useFonts, 
+  Jost_400Regular, 
+  Jost_600SemiBold
 } from '@expo-google-fonts/jost';
-import { UserIdentification } from "./src/pages/UserIdentification";
-import { Confirmation } from './src/pages/Confirmation';
 
+import Routes from './src/routes';
 
 export default function App() {
   // Correção não esta funcionando o carregamento das fontes
@@ -13,13 +15,19 @@ export default function App() {
     Jost_600SemiBold
   });
 
+  const onLayoutRootView = useCallback(async () =>{
+    if(fontsLoaded){
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
+  if(!fontsLoaded){
+    return null;
   
-  if(!fontsLoaded && !fontError){
-    // SplashScreen.preventAutoHideAsync();
   }
+ 
 
   return (
-    // <UserIdentification/>
-    <Confirmation/>
+   <Routes />
   );
 }
