@@ -1,5 +1,5 @@
 
-import React from 'react';
+import * as React from 'react';
 import { SafeAreaView, View, Text, Image, TouchableOpacity, StyleSheet, Dimensions} from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
@@ -31,6 +31,7 @@ export function Welcome(){
                     <Feather 
                         name='chevron-right' 
                         style={styles.buttonIcon}
+                        onPress={() => navigation.navigate('')}
                     >
         
                     </Feather>
